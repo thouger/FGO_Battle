@@ -4,10 +4,11 @@ __author__ = 'Microcosm'
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-
-img = cv2.imread("test/t1.jpeg", 0)
+order_card = '2160x1080_OrderCard'
+card_face = '2160x1080_CardFace'
+img = cv2.imread(f"{card_face}/t1.jpeg", 0)
 img2 = img.copy()
-template = cv2.imread("res/buster.png", 0)
+template = cv2.imread(f"{order_card}/buster.png", 0)
 w, h = template.shape[::-1]
 
 # 6 中匹配效果对比算法

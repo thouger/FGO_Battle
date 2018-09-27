@@ -5,13 +5,15 @@
 from init import *
 from lib.ats import *
 
-
+order_card = '2160x1080_OrderCard'
+card_face = '2160x1080_CardFace'
 def cards(sh):
     global quick, arts, buster
-    threshold = 0.95
-    quick = get_crd(sh, 'res/quick.png', threshold)
-    arts = get_crd(sh, 'res/arts.png', threshold)
-    buster = get_crd(sh, 'res/buster.png', threshold)
+    #0.98刚好三个点
+    threshold = 0.98
+    quick = get_crd(sh, f'{order_card}/quick.png', threshold)
+    arts = get_crd(sh, f'{order_card}/arts.png', threshold)
+    buster = get_crd(sh, f'{order_card}res/buster.png', threshold)
 
     all_cards = quick + arts + buster
     all_cards.sort()
@@ -29,7 +31,7 @@ def marks(sh,):
 
 def test():
     # sh = screenshot()
-    sh='./test/t1.jpeg'
+    sh= f'{card_face}/t1.jpeg'
 
     cards(sh)  # show coordinates of cards
     marks(sh)  # show coordinates of marks
