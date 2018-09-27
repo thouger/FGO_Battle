@@ -15,7 +15,7 @@ def location(sh, tmp, thd):
     #刚好三个点就不用这个了
     OrderCard_x = np.mean(loc[0]).astype(np.int)
     OrderCard_y = loc[1]
-    mark(img,template,OrderCard_x,OrderCard_y)
+    # mark(img,template,OrderCard_x,OrderCard_y)
     return {OrderCard_x:OrderCard_y}
 
 
