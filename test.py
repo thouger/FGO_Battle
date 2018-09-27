@@ -29,9 +29,9 @@ def marks(sh,):
 
 def test():
     # sh = screenshot()
-    sh='./test/t1.jpeg'
+    sh='./test/t2.jpeg'
 
-    cards(sh)  # show coordinates of cards
+    # cards(sh)  # show coordinates of cards
     marks(sh)  # show coordinates of marks
 
     print('-------------')
