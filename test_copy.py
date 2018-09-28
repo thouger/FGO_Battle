@@ -4,9 +4,7 @@
 # change some parameters in "card.py" "anti.py" if necessary
 from init import *
 from lib.ats import *
-
-order_card = '2160x1080_OrderCard'
-card_face = '2160x1080_CardFace'
+from config import *
 def cards(sh):
     global quick, arts, buster
     #0.98刚好三个点

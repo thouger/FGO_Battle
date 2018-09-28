@@ -1,4 +1,6 @@
 # control of the cards
+from interval import Interval
+
 from lib.cvs import *
 
 _metaclass_ = type
@@ -108,8 +110,11 @@ def set_type(cards, quick, arts, buster):
 
 def recognize_area(sh, resistance_x):
     width = cv2.imread(sh, 0).shape[1]
-    interval = width // 5
+    between = width // 5
+    last = 0
     for x in resistance_x:
         for i in range(1,6):
-            if x > i * interval:
-                print(i-1)
+            if x in Interval(last,i*between):
+                print(i)
+                break
+        last = i*between
