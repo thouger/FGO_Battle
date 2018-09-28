@@ -18,7 +18,14 @@ from PIL import ImageGrab
 # print()
 # im =ImageGrab.grab()
 # im.show()
-from home import Home
+# from home import Home
+#
+# home=Home('main.jpg')
+# home.find_everyday_entrance()
 
-home=Home('main.jpg')
-home.find_everyday_entrance()
+import pytesseract
+from PIL import Image
+
+image = Image.open('2560x1440_home/AP.jpg')
+code = pytesseract.image_to_string(image)
+print(code)
