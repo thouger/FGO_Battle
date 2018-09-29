@@ -1,6 +1,12 @@
 # control of the cards
+from interval import Interval
+
 from lib.cvs import *
+
 _metaclass_ = type
+
+order_card = '2160x1080_OrderCard'
+card_face = '2160x1080_CardFace'
 
 
 class Card:
@@ -20,7 +26,7 @@ class Card:
 
 def get_crd(sh, tmp, thd):  # get the coordinates of cards/marks
     ary = location(sh, tmp, thd)
-    ary.sort()
+    ary=[(i, list(ary.keys())[0]) for i in list(ary.values())[0]]
     for i in range(len(ary)):
         for p in range(1, len(ary) - i):
             for k in range(-5, 5):
@@ -35,13 +41,13 @@ def get_crd(sh, tmp, thd):  # get the coordinates of cards/marks
 # This part is used to set the status of the cards
 def get_restraint(sh):  # get the coordinates of the restraint mark
     threshold = 0.85
-    restraint = get_crd(sh, 'res/restraint.png', threshold)
+    restraint = get_crd(sh, f'{order_card}/restraint.png', threshold)
     return restraint
 
 
 def get_resistance(sh):  # get the coordinates of the resistance mark
     threshold = 0.85
-    resistance = get_crd(sh, 'res/resistance.png', threshold)
+    resistance = get_crd(sh, f'{order_card}/resistance.png', threshold)
     return resistance
 
 
@@ -100,3 +106,15 @@ def set_type(cards, quick, arts, buster):
             for b in range(len(buster)):
                 if cards[i].crd == buster[b]:
                     cards[i].type = 2
+
+
+def recognize_area(sh, resistance_x):
+    width = cv2.imread(sh, 0).shape[1]
+    between = width // 5
+    last = 0
+    for x in resistance_x:
+        for i in range(1,6):
+            if x in Interval(last,i*between):
+                print(i)
+                break
+        last = i*between

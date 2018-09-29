@@ -3,11 +3,11 @@ from card import *
 
 
 def init():  # initialize 5 command cards
-    a = Card()
-    b = Card()
-    c = Card()
-    d = Card()
-    e = Card()
+    a = combat_analysis()
+    b = combat_analysis()
+    c = combat_analysis()
+    d = combat_analysis()
+    e = combat_analysis()
     global cards
     cards = [a, b, c, d, e]
     return cards
