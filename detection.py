@@ -5,8 +5,8 @@ from config import *
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-img = cv2.imread(f"{home}/main.jpg", 0)
-sign = cv2.imread(f"{home}/everyday.jpg", 0)
+img = cv2.imread(f"{combat}t1.jpg", 0)
+sign = cv2.imread(f"{OrderCard}quick.jpg", 0)
 
 # 6 中匹配效果对比算法
 # methods = ['cv2.TM_CCOEFF']

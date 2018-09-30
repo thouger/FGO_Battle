@@ -1,3 +1,4 @@
+#config:utf-8
 from interval import Interval
 
 from config import *
@@ -6,22 +7,37 @@ import pandas as pd
 import cv2
 from matplotlib import pyplot as plt
 
+from lib.compare_image import compare_images
+
+
 class CombatAnalysis:
     def __init__(self, picture):
 
-        self.screenshot = f'{card_face}/{picture}'
-        self.screeen_img = cv2.imread(self.screenshot, 0)
+        # this is a screenshot which want ti recognize,now use {combat} for the monment
+        self.screenshot = f'{combat}{picture}'
+        self.screen_img = cv2.imread(self.screenshot, 0)
 
         self.split_area()
 
     def split_area(self):
-        width = self.screeen_img.shape
+        width = self.screen_img.shape
         self.interval = [Interval(width * (i - 1), width * i) for i in range(1, 6)]
 
-    def get_card_area(self, sign_pic, threshold):  # get the coordinates of cards/marks
+    def get_current_OrderCard(self):
+        current_OrderCard = {}
+        fgo_OrderCard = ['arts','buster','quick']
+        for i in range(5):
+            unkown_OrderCard = self.screen_img[1145:1185,210+511*i:387+511*i]
+            for OrderCard_name in fgo_OrderCard:
+                err, SSIM = compare_images(unkown_OrderCard, cv2.imread(f'{OrderCard}{OrderCard_name}.jpg', 0))
+                if SSIM>0.9:
+                    current_OrderCard[i] = OrderCard_name
+                    break
+        return current_OrderCard
+    def get_card_area(self, sign_pic, threshold):
         sign_img = cv2.imread(sign_pic, 0)
 
-        res = cv2.matchTemplate(self.screeen_img, sign_img, cv2.TM_CCOEFF_NORMED)
+        res = cv2.matchTemplate(self.screen_img, sign_img, cv2.TM_CCOEFF_NORMED)
 
         loc = np.where(res >= threshold)
         OrderCard_x = np.mean(loc[0]).astype(np.int)
@@ -52,7 +68,7 @@ class CombatAnalysis:
 
     def recognize_damage_multiplier(self, resistance_x):
         area = []
-        width = self.screeen_img.shape[1]
+        width = self.screen_img.shape[1]
         for x in resistance_x:
             for i in self.interval:
                 if x in i:
@@ -75,7 +91,7 @@ class CombatAnalysis:
         w, h = template.shape[::-1]
         for OrderCard_y in OrderCard_y_list:
             bottom_right = (OrderCard_y + w, OrderCard_x + h)
-            cv2.rectangle(self.screeen_img, (OrderCard_y, OrderCard_x), bottom_right, 255, 2)
+            cv2.rectangle(self.screen_img, (OrderCard_y, OrderCard_x), bottom_right, 255, 2)
         plt.subplot(111)
-        plt.imshow(self.screeen_img, cmap="gray")
+        plt.imshow(self.screen_img, cmap="gray")
         plt.show()
