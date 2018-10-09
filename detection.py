@@ -5,13 +5,12 @@ from config import *
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-img = cv2.imread(f"{combat}t1.jpg", 0)
-sign = cv2.imread(f"{OrderCard}quick.jpg", 0)
-
+img = cv2.imread(f"{combat}t5.jpg")
+sign = cv2.imread(f"{OrderCard}quick.jpg")
 # 6 中匹配效果对比算法
-# methods = ['cv2.TM_CCOEFF']
-methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
-           'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+methods = ['cv2.TM_CCOEFF']
+# methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
+#            'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
 
 for meth in methods:
     left_top,right_bottom=find_area(img,sign,meth)

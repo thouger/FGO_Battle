@@ -5,7 +5,7 @@ import cv2
 import pytesseract
 
 from config import *
-from lib.compare_image import compare_images
+from compare_image import compare_images
 from positioning import find_area, mark
 
 

@@ -3,11 +3,10 @@ from interval import Interval
 
 from config import *
 import numpy as np
-import pandas as pd
 import cv2
 from matplotlib import pyplot as plt
 
-from lib.compare_image import compare_images
+from compare_image import compare_images
 
 
 class CombatAnalysis:

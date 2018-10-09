@@ -1,6 +1,6 @@
 # avoid the ID being banned
-from lib.ats import *
-from lib.cvs import *
+from ats import *
+from cvs import *
 import random
 
 
