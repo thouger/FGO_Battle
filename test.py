@@ -1,5 +1,8 @@
 import cv2
 import numpy as np
+
+from compare_image.compare1 import image_similarity1
+from compare_image.compare2 import compare_images
 from rolling_window import rolling_window
 from PIL import Image
 from config import *
@@ -16,30 +19,29 @@ from config import *
 #        [6, 7, 8]])
 # b = rolling_window(a, (2,2))
 
-# im = Image.open(f"2160x1080_CardFace/t1.jpeg")
-im = Image.open(f"2560x1440_combat/t1.jpg")
-# img2_size = im2.size
-# # print("width & height: {}".format(img2_size))
-# gap = (img2_size[0] - 1920) / 2
-# left = gap
-# right = img2_size[0] - gap
-# top = (img2_size[1] / 2) - 100
-# bottom = img2_size[1]
-# # print((left, top, right, bottom))
-# region = im2.crop((left, top, right, bottom))
-# region.save("out.png")
-# im = Image.open("out.png")
-img_size = im.size
-xx = 5
-yy = 1
-x = img_size[0] // xx
-y = img_size[1] // yy
-for j in range(yy):
-    for i in range(xx):
-        left = i * x
-        up = y * j
-        right = left + x
-        low = up + y
-        region = im.crop((left, up, right, low))
-        # print((left, up, right, low))
-        region.save(f"utt{i}.png")
+# from itertools import combinations
+# for i in combinations(range(5), 2):
+#     print(i)
+#     similarity_bands_via_numpy, similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code = \
+#         image_similarity1(f'five_image/{i[0]}.png', f'five_image/{i[1]}.png')
+#     print()
+
+# img2= cv2.imread(f"five_image/1.png",0)
+# x,y=img2.shape
+# img2 = img2[y//2:y,0:x]
+# cv2.imshow('1',img2)
+# cv2.waitKey(0)
+
+for i in range(5):
+    print(i)
+    img1= cv2.imread(f"five_image/{i}.jpg")
+    y, x,z = img1.shape
+    img1 = img1[y//2-10:y-70,0+80:x-350]
+    # original =  cv2.cvtColor(img1 , cv2.COLOR_BGR2GRAY)
+    # img2= cv2.imread(f"five_image/{i+1}.png",0)
+    # img2 = img2[y//2-10:y-70,0+80:x-350]
+    # shopped = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+    # compare_images(original, shopped, "Original vs. Photoshopped")
+    # compare_images(img1, img2, "Original vs. Photoshopped")
+    cv2.imwrite(f"five_image/{i}.jpg",img1)
+    # cv2.imwrite(f"five_image/{i{1}}.png", img2)

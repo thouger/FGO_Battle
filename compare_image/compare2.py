@@ -2,7 +2,7 @@
 # python compare2.py
 
 # import the necessary packages
-from skimage.measure import structural_similarity as ssim
+from skimage.measure import compare_ssim as ssim
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
@@ -44,33 +44,34 @@ def compare_images(imageA, imageB, title):
     plt.show()
 
 
-# load the images -- the original, the original + contrast,
-# and the original + photoshop
-original = cv2.imread("images/jp_gates_original.png")
-contrast = cv2.imread("images/jp_gates_contrast.png")
-shopped = cv2.imread("images/jp_gates_photoshopped.png")
+if __name__ == '__main__':
+    # load the images -- the original, the original + contrast,
+    # and the original + photoshop
+    original = cv2.imread("images/jp_gates_original.png")
+    contrast = cv2.imread("images/jp_gates_contrast.png")
+    shopped = cv2.imread("images/jp_gates_photoshopped.png")
 
-# convert the images to grayscale
-original = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
-contrast = cv2.cvtColor(contrast, cv2.COLOR_BGR2GRAY)
-shopped = cv2.cvtColor(shopped, cv2.COLOR_BGR2GRAY)
+    # convert the images to grayscale
+    original = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
+    contrast = cv2.cvtColor(contrast, cv2.COLOR_BGR2GRAY)
+    shopped = cv2.cvtColor(shopped, cv2.COLOR_BGR2GRAY)
 
-# initialize the figure
-fig = plt.figure("Images")
-images = ("Original", original), ("Contrast", contrast), ("Photoshopped", shopped)
+    # initialize the figure
+    fig = plt.figure("Images")
+    images = ("Original", original), ("Contrast", contrast), ("Photoshopped", shopped)
 
-# loop over the images
-for (i, (name, image)) in enumerate(images):
-    # show the image
-    ax = fig.add_subplot(1, 3, i + 1)
-    ax.set_title(name)
-    plt.imshow(image, cmap=plt.cm.gray)
-    plt.axis("off")
+    # loop over the images
+    for (i, (name, image)) in enumerate(images):
+        # show the image
+        ax = fig.add_subplot(1, 3, i + 1)
+        ax.set_title(name)
+        plt.imshow(image, cmap=plt.cm.gray)
+        plt.axis("off")
 
-# show the figure
-plt.show()
+    # show the figure
+    plt.show()
 
-# compare the images
-compare_images(original, original, "Original vs. Original")
-compare_images(original, contrast, "Original vs. Contrast")
-compare_images(original, shopped, "Original vs. Photoshopped")
+    # compare the images
+    compare_images(original, original, "Original vs. Original")
+    compare_images(original, contrast, "Original vs. Contrast")
+    compare_images(original, shopped, "Original vs. Photoshopped")

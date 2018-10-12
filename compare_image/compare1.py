@@ -229,7 +229,7 @@ def get_filename(path):
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
 
-
-similarity_bands_via_numpy, similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code =\
-    image_similarity1('test/img1.png', 'test/img2.png')
-print()
+if __name__ == '__main__':
+    similarity_bands_via_numpy, similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code = \
+        image_similarity1('../test/img1.png', '../test/img1.png')
+    print()

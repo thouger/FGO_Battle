@@ -1,5 +1,5 @@
 from PIL import Image
-im = Image.open(r"D:\code\FGO_Battle\2160x1080_CardFace\t1.jpeg")# 图片的宽度和高度
+im = Image.open(r"out.png")# 图片的宽度和高度
 img_size = im.size
 print("图片宽度和高度分别是{}".format(img_size))
 xx = 5
@@ -15,5 +15,5 @@ for j in range(yy):
         region = im.crop((left,up,right,low))
         print((left,up,right,low))
         temp = str(i)+str(j)
-        region.save(f"{i}.jpeg")
+        region.save(f"five_image/{i}.png")
 
