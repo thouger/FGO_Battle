@@ -5,9 +5,10 @@ from utils.compare_image import compare_images
 from utils.config import *
 import numpy as np
 import cv2
-
-# TODO 识别开始按钮
-from utils.positioning import mark
+import matplotlib.pyplot as plt
+from PIL import Image
+# TODO get_card_area函数有问题
+from utils.positioning import recognize, mark_point
 
 
 class CombatAnalysis:
@@ -21,9 +22,12 @@ class CombatAnalysis:
         self.split_area()
 
     def recognize_StartButton(self):
-        threshold = 0.85
-        resistance = self.get_card_area(f'{combat}start_combat.png', threshold)
-        return resistance
+        threshold = 0.95
+        start_button = cv2.cvtColor(cv2.imread(f'{combat}start_combat.png'), cv2.COLOR_BGR2GRAY)
+        if (recognize(self.screen_img_gray,start_button)>=threshold).any():
+            return True
+        else:
+            return False
 
     def split_area(self):
         width = self.screen_img.shape
@@ -62,14 +66,14 @@ class CombatAnalysis:
         return ary
 
     # This part is used to set the status of the cards
-    def get_double_damage(self, ):  # get the coordinates of the restraint mark
+    def get_double_damage(self):  # get the coordinates of the restraint mark
         threshold = 0.85
-        restraint = self.get_card_area(f'{order_card}/restraint.png', threshold)
+        restraint = self.get_card_area(f'{OrderCard}/restraint.png', threshold)
         return restraint
 
     def get_half_damage(self):  # get the coordinates of the resistance mark
         threshold = 0.85
-        resistance = self.get_card_area(f'{order_card}/resistance.png', threshold)
+        resistance = self.get_card_area(f'{OrderCard}/resistance.png', threshold)
         return resistance
 
     def recognize_damage_multiplier(self, resistance_x):
@@ -84,9 +88,9 @@ class CombatAnalysis:
 
     def recognize_OrderCard(self):
         threshold = 0.98
-        quick = self.get_card_area(f'{order_card}/quick.png', threshold)
-        arts = self.get_card_area(f'{order_card}/arts.png', threshold)
-        buster = self.get_card_area(f'{order_card}/buster.png', threshold)
+        quick = self.get_card_area(f'{OrderCard}/quick.png', threshold)
+        arts = self.get_card_area(f'{OrderCard}/arts.png', threshold)
+        buster = self.get_card_area(f'{OrderCard}/buster.png', threshold)
 
         all_cards = quick + arts + buster
         all_cards.sort()
@@ -108,4 +112,7 @@ class CombatAnalysis:
 if __name__ == '__main__':
     combat_analysis = CombatAnalysis('t.jpg')
     # combat_analysis.get_follower()
-    print(combat_analysis.recognize_StartButton())
+    # print(combat_analysis.recognize_StartButton())
+    point = combat_analysis.get_card_area(f'{combat}/start_combat.png', 0.95)
+    mark_point(f'{combat}t.jpg',point[0])
+    print(point)

@@ -1,3 +1,5 @@
+from PIL import Image
+
 methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
            'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
 import cv2
@@ -39,3 +41,12 @@ def marks(img,template, OrderCard_x, OrderCard_y_list):
     plt.subplot(111)
     plt.imshow(img, cmap="gray")
     plt.show()
+
+def mark_point(img,point):
+    # plt.imshow(cv2.imread(img))
+    plt.imshow(Image.open(img))
+    plt.annotate(f'{point[0], point[1]}', xy=point, xycoords='data',
+                 xytext=(0.5, 0.5), textcoords='figure fraction',
+                 arrowprops=dict(arrowstyle="->"))
+    plt.show()
+recognize = lambda img,template:cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
