@@ -1,4 +1,4 @@
-#config:utf-8
+# coding=gbk
 from interval import Interval
 
 from utils.compare_image import compare_images
@@ -6,16 +6,24 @@ from utils.config import *
 import numpy as np
 import cv2
 
-#TODO 识别开始按钮
+# TODO 识别开始按钮
+from utils.positioning import mark
+
+
 class CombatAnalysis:
     first_kill = ()
+
     def __init__(self, picture):
 
         self.screenshot = f'{combat}{picture}'
         self.screen_img = cv2.imread(self.screenshot)
         self.screen_img_gray = cv2.cvtColor(cv2.imread(self.screenshot), cv2.COLOR_BGR2GRAY)
-
         self.split_area()
+
+    def recognize_StartButton(self):
+        threshold = 0.85
+        resistance = self.get_card_area(f'{combat}start_combat.png', threshold)
+        return resistance
 
     def split_area(self):
         width = self.screen_img.shape
@@ -23,24 +31,24 @@ class CombatAnalysis:
 
     def get_current_OrderCard(self):
         current_OrderCard = {}
-        fgo_OrderCard = ['arts','buster','quick']
+        fgo_OrderCard = ['arts', 'buster', 'quick']
         for i in range(5):
-            unkown_OrderCard = self.screen_img[1145:1185,210+511*i:387+511*i]
+            unkown_OrderCard = self.screen_img[1145:1185, 210 + 511 * i:387 + 511 * i]
             for OrderCard_name in fgo_OrderCard:
                 err, SSIM = compare_images(unkown_OrderCard, cv2.imread(f'{OrderCard}{OrderCard_name}.jpg', 0))
-                if SSIM>0.9:
+                if SSIM > 0.9:
                     current_OrderCard[i] = OrderCard_name
                     break
         return current_OrderCard
-    def get_card_area(self, sign_pic, threshold):
-        sign_img = cv2.imread(sign_pic, 0)
 
-        res = cv2.matchTemplate(self.screen_img, sign_img, cv2.TM_CCOEFF_NORMED)
+    def get_card_area(self, template, threshold):
+        template_img = cv2.cvtColor(cv2.imread(template), cv2.COLOR_BGR2GRAY)
+        res = cv2.matchTemplate(self.screen_img_gray, template_img, cv2.TM_CCOEFF_NORMED)
 
         loc = np.where(res >= threshold)
         OrderCard_x = np.mean(loc[0]).astype(np.int)
         OrderCard_y = loc[1]
-        self.mark(sign_img,OrderCard_x,OrderCard_y)
+        # mark(template, OrderCard_x, OrderCard_y)
         ary = {OrderCard_x: OrderCard_y}
         ary = [(i, list(ary.keys())[0]) for i in list(ary.values())[0]]
         for i in range(len(ary)):
@@ -84,14 +92,20 @@ class CombatAnalysis:
         all_cards.sort()
 
         print("cards: ", all_cards)
+
     def recognize_follower(self):
-        for i in range(1,6):
+        for i in range(1, 6):
             img = cv2.imread(f'tmp/follow{i}.jpg')
+
     def get_follower(self):
-        for i in range(1,6):
-            img = self.screen_img_gray[826:826 + 382 // 2, 105 + (300 + 213) * (i - 1):105 + (300 + 213) * (i - 1) + 300]
+        for i in range(1, 6):
+            img = self.screen_img_gray[826:826 + 382 // 2,
+                  105 + (300 + 213) * (i - 1):105 + (300 + 213) * (i - 1) + 300]
             cv2.imshow('1', img)
             cv2.imwrite(f'tmp/follow{i}.jpg', img)
+
+
 if __name__ == '__main__':
-    combat_analysis = CombatAnalysis('t1.jpg')
-    combat_analysis.get_follower()
+    combat_analysis = CombatAnalysis('t.jpg')
+    # combat_analysis.get_follower()
+    print(combat_analysis.recognize_StartButton())

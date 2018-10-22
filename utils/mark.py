@@ -2,10 +2,9 @@
 from utils.positioning import find_area, mark
 
 from utils.config import *
-import cv2
 
-img = cv2.imread(f"{combat}t5.jpg")
-sign = cv2.imread(f"{OrderCard}quick.jpg")
+img = f"../{combat}t.jpg"
+sign = f"../{combat}start_combat.jpg"
 # 6 中匹配效果对比算法
 methods = ['cv2.TM_CCOEFF']
 # methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
@@ -13,4 +12,4 @@ methods = ['cv2.TM_CCOEFF']
 
 for meth in methods:
     left_top,right_bottom=find_area(img,sign,meth)
-    mark(img,sign,left_top,right_bottom)
+    mark(img,sign,[left_top,right_bottom])

@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 def find_area(img,sign,method):
     img = cv2.cvtColor(cv2.imread(img), cv2.COLOR_BGR2GRAY)
     sign = cv2.cvtColor(cv2.imread(sign), cv2.COLOR_BGR2GRAY)
+    # img = cv2.imread(img,0)
+    # sign = cv2.imread(sign,0)
     w, h = sign.shape[::-1]
     res = cv2.matchTemplate(img, sign, eval(method))
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
@@ -18,6 +20,7 @@ def find_area(img,sign,method):
 def mark(img, template, args):
     img = cv2.imread(img)
     img2 = img.copy()
+    template = cv2.imread(template)
     cv2.rectangle(img2, args[0],args[1], 255, 2)
 
     plt.subplot(221), plt.imshow(img, cmap="gray")
