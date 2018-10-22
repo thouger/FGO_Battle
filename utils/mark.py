@@ -1,10 +1,9 @@
 # -*- coding:utf-8 -*-
-from positioning import find_area, mark
+from utils.positioning import find_area, mark
 
-from config import *
+from utils.config import *
 import cv2
-import numpy as np
-from matplotlib import pyplot as plt
+
 img = cv2.imread(f"{combat}t5.jpg")
 sign = cv2.imread(f"{OrderCard}quick.jpg")
 # 6 中匹配效果对比算法

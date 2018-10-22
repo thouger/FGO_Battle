@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3be2e21-4557-4e65-83eb-d8f20180d731" name="Default" comment="修改了ap体力验证图&#10;创建图片对比功能（使用ssim算法）&#10;增加识别卡类型的函数，使用图片裁剪方法，使用ssim算法比较&#10;修改config里面文件夹命名增加反斜杠&#10;增加裁剪指令卡功能&#10;增加主页面识别ap功能，识别并且关闭欢迎界面">
-      <change afterPath="$PROJECT_DIR$/rolling_window.py" afterDir="false" />
+    <list default="true" id="e3be2e21-4557-4e65-83eb-d8f20180d731" name="Default" comment="增加图片比较算法">
+      <change afterPath="$PROJECT_DIR$/compare_image/compare4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/FeaturePoint_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2160x1080_OrderCard/quick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2160x1080_OrderCard/quick2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2560x1440_combat/t2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/2560x1440_combat/t2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2560x1440_combat/t3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/2560x1440_combat/t3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anti.py" beforeDir="false" afterPath="$PROJECT_DIR$/anti.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/card_copy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2560x1440_combat/S81009-154903.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2560x1440_combat/S81009-154913.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/anti.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ats.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/combat_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/combat_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_copy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compare_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/compare_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compare_image/compare1.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_image/compare1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop_OrderCard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/crop_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cvs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/five_image/utt4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_XYZ.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/get_picture_XY.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/jp_gates_contrast.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/jp_gates_original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/jp_gates_photoshopped.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ats.py" beforeDir="false" afterPath="$PROJECT_DIR$/ats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/compare_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cvs.py" beforeDir="false" afterPath="$PROJECT_DIR$/cvs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_sign1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_sign2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_sign3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_sign4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_copy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/positioning.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/positioning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_follower.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resize_picture.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/resize_picture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolling_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/rolling_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/split_picture.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/StartSign.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/buster.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quick2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quick3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,97 +59,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="combat_analysis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/combat_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1034">
+              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.py" pinned="false" current-in-tab="false">
-        <entry file="file://G:/Anaconda3/Lib/site-packages/PIL/Image.py">
+      <file leaf-file-name="get_picture_XY.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/get_picture_XY.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="2579" selection-start-line="2579" selection-end-line="2579" />
+            <state relative-caret-position="133">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crop_image.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crop_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crop_OrderCard.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crop_OrderCard.py">
+      <file leaf-file-name="note.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/note.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_XYZ.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/get_XYZ.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="anti.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/anti.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-364" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ats.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ats.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resize_picture.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resize_picture.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="41" />
-              <folding>
-                <element signature="e#23#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -143,6 +98,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>&gt;&gt; &gt;</find>
+      <find>2359944</find>
+      <find>DescriptorExtractor_create</find>
+      <find>cv2</find>
+      <find>compare_images</find>
+      <find>begin_similarty_compare</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,26 +117,50 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/compare_image.py" />
-        <option value="$PROJECT_DIR$/compare_image/compare2.py" />
-        <option value="$PROJECT_DIR$/home.py" />
         <option value="$PROJECT_DIR$/get_XYZ.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/lib/compare_image.py" />
-        <option value="$PROJECT_DIR$/combat_analysis.py" />
         <option value="$PROJECT_DIR$/crop_image.py" />
         <option value="$PROJECT_DIR$/crop_OrderCard.py" />
         <option value="$PROJECT_DIR$/rolling_window.py" />
         <option value="$PROJECT_DIR$/config_copy.py" />
         <option value="$PROJECT_DIR$/detection.py" />
+        <option value="$PROJECT_DIR$/1.py" />
+        <option value="$PROJECT_DIR$/compare_image/__init__.py" />
+        <option value="$PROJECT_DIR$/compare_image/compare2.py" />
+        <option value="$PROJECT_DIR$/split_picture.py" />
+        <option value="$PROJECT_DIR$/compare_image/compare3.py" />
+        <option value="$PROJECT_DIR$/recognition_follower.py" />
+        <option value="$PROJECT_DIR$/FeaturePoint_detection.py" />
+        <option value="$PROJECT_DIR$/utils/resize_picture.py" />
+        <option value="$PROJECT_DIR$/utils/FeaturePoint_detection.py" />
+        <option value="$PROJECT_DIR$/utils/recognition_follower.py" />
+        <option value="$PROJECT_DIR$/utils/__init__.py" />
+        <option value="$PROJECT_DIR$/five_image/split_picture.py" />
+        <option value="$PROJECT_DIR$/five_image/get_OrderCard.py" />
+        <option value="$PROJECT_DIR$/five_image/get_card.py" />
+        <option value="$PROJECT_DIR$/compare_image/compare4.py" />
+        <option value="$PROJECT_DIR$/utils/get_XYZ.py" />
+        <option value="$PROJECT_DIR$/home.py" />
+        <option value="$PROJECT_DIR$/utils/mark.py" />
+        <option value="$PROJECT_DIR$/cvs.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/utils/positioning.py" />
+        <option value="$PROJECT_DIR$/utils/crop_image.py" />
+        <option value="$PROJECT_DIR$/five_image/recognition_follower.py" />
+        <option value="$PROJECT_DIR$/utils/compare_image.py" />
+        <option value="$PROJECT_DIR$/compare_image/compare1.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/combat_analysis.py" />
+        <option value="$PROJECT_DIR$/utils/get_picture_XY.py" />
+        <option value="$PROJECT_DIR$/note.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="779" />
-    <option name="y" value="-25" />
-    <option name="width" value="1144" />
-    <option name="height" value="1032" />
+    <option name="x" value="598" />
+    <option name="width" value="1560" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -196,7 +180,7 @@
             <path>
               <item name="FGO_Battle" type="b2602c69:ProjectViewProjectNode" />
               <item name="FGO_Battle" type="462c0819:PsiDirectoryNode" />
-              <item name="get_XYZ.py" type="8704e2dd:PyFileNode" />
+              <item name="home.py" type="8704e2dd:PyFileNode" />
             </path>
           </expand>
           <select />
@@ -206,10 +190,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../artificio" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\code\FGO_Battle\utils" />
+      <recent name="H:\code\FGO_Battle\five_image" />
       <recent name="H:\code\FGO_Battle" />
       <recent name="H:\code\FGO_Battle\2560x1440_home" />
       <recent name="H:\code\FGO_Battle\compare_image" />
@@ -230,8 +217,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_XYZ">
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.get_picture_XY">
+    <configuration name="combat_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FGO_Battle" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -243,13 +230,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/combat_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="crop_OrderCard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="compare_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FGO_Battle" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -257,17 +244,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crop_OrderCard.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/compare_image.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="crop_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="crop_image (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FGO_Battle" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,11 +262,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crop_image.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/crop_image.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -297,13 +284,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detection.py" />
+      <option name="SCRIPT_NAME" value="H:\code\FGO_Battle\utils\mark.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="get_XYZ" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="get_picture_XY" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FGO_Battle" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -311,11 +298,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_XYZ.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/get_picture_XY.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -341,19 +328,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.detection" />
+      <item itemvalue="Python.get_picture_XY" />
+      <item itemvalue="Python.crop_image (1)" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.crop_image" />
-      <item itemvalue="Python.config" />
-      <item itemvalue="Python.crop_OrderCard" />
-      <item itemvalue="Python.get_XYZ" />
+      <item itemvalue="Python.compare_image" />
+      <item itemvalue="Python.combat_analysis" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_XYZ" />
+        <item itemvalue="Python.get_picture_XY" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.crop_OrderCard" />
-        <item itemvalue="Python.crop_image" />
-        <item itemvalue="Python.config" />
+        <item itemvalue="Python.combat_analysis" />
+        <item itemvalue="Python.compare_image" />
+        <item itemvalue="Python.crop_image (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538302447724</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加矩阵窗口滚动算法，按照维度来滚动矩阵">
+      <created>1539092725815</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539092725815</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加图片比较算法">
+      <created>1539339749479</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539339749479</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -396,26 +397,53 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6912621" visible="true" weight="0.19652265" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3177471" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.41886196" side_tool="true" visible="true" weight="0.35185185" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49438944" weight="0.30967742" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.581138" visible="true" weight="0.35185185" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49683878" weight="0.3769063" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71029085" visible="true" weight="0.19652265" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4997353" weight="0.3166287" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002647" side_tool="true" weight="0.32346243" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49438944" weight="0.3064877" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.51738673" weight="0.36788154" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49683878" weight="0.3344519" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32705098" />
-      <window_info id="Structure" order="1" sideWeight="0.30873787" side_tool="true" weight="0.17129071" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32208923" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47945204" weight="0.50108933" />
+      <window_info id="Structure" order="1" sideWeight="0.28970918" side_tool="true" visible="true" weight="0.19652265" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947312" weight="0.3210291" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46875" weight="0.4217002" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.17200854" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="11" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -423,391 +451,404 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="修改了ap体力验证图&#10;创建图片对比功能（使用ssim算法）&#10;增加识别卡类型的函数，使用图片裁剪方法，使用ssim算法比较&#10;修改config里面文件夹命名增加反斜杠&#10;增加裁剪指令卡功能&#10;增加主页面识别ap功能，识别并且关闭欢迎界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了ap体力验证图&#10;创建图片对比功能（使用ssim算法）&#10;增加识别卡类型的函数，使用图片裁剪方法，使用ssim算法比较&#10;修改config里面文件夹命名增加反斜杠&#10;增加裁剪指令卡功能&#10;增加主页面识别ap功能，识别并且关闭欢迎界面" />
+    <MESSAGE value="增加矩阵窗口滚动算法，按照维度来滚动矩阵" />
+    <MESSAGE value="增加图片比较算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加图片比较算法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crop_image.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/combat_analysis.py</url>
-          <line>29</line>
+          <line>28</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crop_OrderCard.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/utils/FeaturePoint_detection.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/utils/FeaturePoint_detection.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/FeaturePoint_detection.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/five_image/get_card.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/crop_image.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/get_picture_XY.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/crop_image.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/compare_image/compare1.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="58" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>from functools import reduce
+
+print(reduce(lambda x,y:y-x,y)/len(x))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>from functools import reduce
+
+print(reduce(lambda x,z:x+z,y)/len(y))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>from functools import reduce
+
+print(reduce(lambda x,y:x+y,y)/len(y))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>from functools import reduce
+
+a=reduce(lambda x,y:y-x,y)/len(y)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>from functools import reduce
+
+a=reduce(lambda x,y:x+y,y)/len(y)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>from functools import reduce
+
+reduce(lambda x,y:x+y,y)/len(y)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cv2.imshow('test',img)
+cv2.waitKey(0)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>img1 = cv2.imread(f&quot;{i}.jpg&quot;)
+y, x, z = img1.shape
+img1 = img1[y // 2 + 110:y - 450, 0 + 180:x - 190]
+cv2.imshow('1',img1)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>img1 = cv2.imread(f&quot;{i}.jpg&quot;)
+y, x, z = img1.shape
+img1 = img1[y // 2 + 110:y - 450, 0 + 180:x - 180]
+cv2.imshow('1',img1)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>array[0][0]</expression-string>
+        <expression-string>(x[8]-x[6])/3</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>b</expression-string>
+        <expression-string>(x[5]-x[3])/3</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>b[0]</expression-string>
+        <expression-string>(x[2]-x[0])/3</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>b[0][0]</expression-string>
+        <expression-string>reduce(lambda x,y:y-x,x[:3])/3</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>b[0][1]</expression-string>
+        <expression-string>reduce(lambda x,y:y-x,x[3:6])/3</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>b[1]</expression-string>
+        <expression-string>reduce(lambda x,y:y-x,x[3:6])/len(3)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>array[1]</expression-string>
+        <expression-string>reduce(lambda x,y:y-x,x[3:6])/len(x)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>array[1].shape</expression-string>
+        <expression-string>reduce(lambda x,y:y-x,x[:3])/len(x)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>array</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>img2.shape</expression-string>
+        <expression-string>x[3:6]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/five_image/2.png" />
+    <entry file="file://$PROJECT_DIR$/five_image/3.png" />
+    <entry file="file://$PROJECT_DIR$/five_image/0.png" />
+    <entry file="file://$PROJECT_DIR$/five_image/4.png" />
+    <entry file="file://G:/python3/Lib/site-packages/imageio/core/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="347">
+          <caret line="204" column="49" selection-start-line="204" selection-start-column="49" selection-end-line="204" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/ats.py" />
+    <entry file="file://$PROJECT_DIR$/subpixel5.png" />
+    <entry file="file://$PROJECT_DIR$/main_copy.py" />
+    <entry file="file://G:/python3/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="2608" selection-start-line="2608" selection-end-line="2608" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/five_image/0.jpg" />
+    <entry file="file://$PROJECT_DIR$/five_image/split_picture.py" />
+    <entry file="file://G:/python3.6.6/Tools/pynche/pyColorChooser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1210">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/utils/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/utils/0.jpg" />
+    <entry file="file://$PROJECT_DIR$/out.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/lena.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/crop_OrderCard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/init.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="64" lean-forward="true" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/combat_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crop_image.py">
+    <entry file="file://$PROJECT_DIR$/compare_image/compare3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="28" />
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_image/compare4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="103" column="51" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="51" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_copy.py" />
-    <entry file="file://$PROJECT_DIR$/split_picture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resize_picture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_XYZ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="32" column="56" lean-forward="true" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_image.py" />
-    <entry file="file://$PROJECT_DIR$/answer2.png" />
-    <entry file="file://$PROJECT_DIR$/compare_image/compare1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2451" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_image/compare2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="-133">
+          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anti.py" />
+    <entry file="file://$PROJECT_DIR$/cvs.py" />
+    <entry file="file://$PROJECT_DIR$/start_sign1.jpg" />
+    <entry file="file://$PROJECT_DIR$/start_sign2.jpg" />
+    <entry file="file://$PROJECT_DIR$/start_sign3.jpg" />
+    <entry file="file://$PROJECT_DIR$/start_sign4.jpg" />
+    <entry file="file://$PROJECT_DIR$/utils/resize_picture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="327">
           <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/split_picture.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="95">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_copy.py" />
-    <entry file="file://G:/Anaconda3/Lib/site-packages/skimage/measure/_structural_similarity.py">
+    <entry file="file://G:/python3.6.6/Lib/site-packages/PIL/ImageOps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="233" column="4" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="4" />
+        <state relative-caret-position="129">
+          <caret line="379" column="39" selection-start-line="379" selection-start-column="39" selection-end-line="379" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_image.py">
+    <entry file="file://G:/python3.6.6/Lib/site-packages/PIL/ImageDraw.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        <state relative-caret-position="183">
+          <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start_sign3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_sign4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_sign2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TIM图片20181008145553.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start_sign1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rolling_window.py">
+    <entry file="file://$PROJECT_DIR$/utils/start_sign1.jpg" />
+    <entry file="file://$PROJECT_DIR$/crop_OrderCard.py" />
+    <entry file="file://$PROJECT_DIR$/utils/rolling_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="190">
+          <caret line="67" column="38" lean-forward="true" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_copy.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/combat_analysis.py">
+    <entry file="file://$PROJECT_DIR$/utils/positioning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cvs.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="e#23#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crop_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resize_picture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/card_copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#23#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anti.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-364" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/positioning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="95">
+          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="59" />
           <folding>
             <element signature="e#143#153#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/Anaconda3/Lib/site-packages/PIL/Image.py">
+    <entry file="file://$PROJECT_DIR$/utils/mark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="2579" selection-start-line="2579" selection-end-line="2579" />
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="e#23#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/utils/crop_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        <state relative-caret-position="152">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crop_OrderCard.py">
+    <entry file="file://$PROJECT_DIR$/utils/FeaturePoint_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_XYZ.py">
+    <entry file="file://$PROJECT_DIR$/five_image/recognition_follower.py" />
+    <entry file="file://$PROJECT_DIR$/five_image/get_card.py" />
+    <entry file="file://$PROJECT_DIR$/utils/compare_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="247">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/python3.6.6/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25802">
+          <caret line="1363" column="11" selection-start-line="1363" selection-start-column="11" selection-end-line="1363" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_image/compare1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/combat_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1034">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/get_picture_XY.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
         </state>
       </provider>
     </entry>

@@ -1,20 +1,19 @@
 #config:utf-8
 from interval import Interval
 
-from config import *
+from utils.compare_image import compare_images
+from utils.config import *
 import numpy as np
 import cv2
-from matplotlib import pyplot as plt
 
-from compare_image import compare_images
-
-
+#TODO 识别开始按钮
 class CombatAnalysis:
+    first_kill = ()
     def __init__(self, picture):
 
-        # this is a screenshot which want ti recognize,now use {combat} for the monment
         self.screenshot = f'{combat}{picture}'
-        self.screen_img = cv2.imread(self.screenshot, 0)
+        self.screen_img = cv2.imread(self.screenshot)
+        self.screen_img_gray = cv2.cvtColor(cv2.imread(self.screenshot), cv2.COLOR_BGR2GRAY)
 
         self.split_area()
 
@@ -85,12 +84,14 @@ class CombatAnalysis:
         all_cards.sort()
 
         print("cards: ", all_cards)
-
-    def mark(self, template, OrderCard_x, OrderCard_y_list):
-        w, h = template.shape[::-1]
-        for OrderCard_y in OrderCard_y_list:
-            bottom_right = (OrderCard_y + w, OrderCard_x + h)
-            cv2.rectangle(self.screen_img, (OrderCard_y, OrderCard_x), bottom_right, 255, 2)
-        plt.subplot(111)
-        plt.imshow(self.screen_img, cmap="gray")
-        plt.show()
+    def recognize_follower(self):
+        for i in range(1,6):
+            img = cv2.imread(f'tmp/follow{i}.jpg')
+    def get_follower(self):
+        for i in range(1,6):
+            img = self.screen_img_gray[826:826 + 382 // 2, 105 + (300 + 213) * (i - 1):105 + (300 + 213) * (i - 1) + 300]
+            cv2.imshow('1', img)
+            cv2.imwrite(f'tmp/follow{i}.jpg', img)
+if __name__ == '__main__':
+    combat_analysis = CombatAnalysis('t1.jpg')
+    combat_analysis.get_follower()

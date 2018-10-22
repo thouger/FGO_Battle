@@ -1,5 +1,11 @@
+from itertools import combinations
+
 from skimage.measure import compare_ssim as ssim
 import numpy as np
+from itertools import combinations
+
+from compare_image.compare1 import image_similarity1
+
 
 def compare_images(imageA, imageB):
     # the 'Mean Squared Error' between the two images is the
@@ -9,3 +15,5 @@ def compare_images(imageA, imageB):
     err /= float(imageA.shape[0] * imageA.shape[1])
     SSIM = ssim(imageA, imageB)
     return err,SSIM
+
+

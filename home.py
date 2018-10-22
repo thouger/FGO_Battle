@@ -1,22 +1,28 @@
+#coding:utf-8
 import os
 import time
 
 import cv2
-import pytesseract
+# import pytesseract
 
-from config import *
-from compare_image import compare_images
-from positioning import find_area, mark
+from utils.config import *
+from utils.compare_image import compare_images
+from utils.positioning import find_area, mark
 
-
+# TODO pytesseract的安装
+# TODO 点击关闭按钮
+# TODO 以后屏幕截图存放在tmp文件夹内
+#TODO 进入界面后点击的过程
 class Home:
+
+    AP_pic = f'{home}/AP.jpg'
+    start_img = cv2.imread(f'{home}/start.jpg', 0)
+    StartSign_img = cv2.imread(f'{home}/StartSign.jpg', 0)
+
     def __init__(self, picture):
 
         self.screenshot = f'{home}/{picture}'
         self.screeen_img = cv2.imread(self.screenshot, 0)
-        self.AP_pic = f'{home}/AP.jpg'
-        self.start_img = cv2.imread(f'{home}/start.jpg',0)
-        self.StartSign_img = cv2.imread(f'{home}/StartSign.jpg',0)
 
     def find_everyday_entrance(self):
         everyday_pic = f'{home}/{everyday_entrance}'
@@ -45,6 +51,9 @@ class Home:
             AP = pytesseract.image_to_string(self.AP_pic, config='--psm 6')
         return AP
 
-
     def close_start(self):
-        self.start_img[63,24888]
+        close_start_area = 2482,46
+
+if __name__ == '__main__':
+    home = Home(f'{home}main.jpg')
+    print(home.find_StartSign())

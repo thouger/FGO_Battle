@@ -2,3 +2,5 @@ scikit-image
 opencv-python
 scipy
 matplotlib
+imageio
+interval

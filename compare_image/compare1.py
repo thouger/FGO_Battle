@@ -9,14 +9,6 @@ format = '%(asctime)s - %(filename)s:%(lineno)s - %(message)s'
 log = logging.getLogger(__name__)
 
 def image_similarity1(image_filepath1, image_filepath2):
-    image1_filepath1 = image_filepath1
-    image2_filepath2 = image_filepath2
-
-    sim_list = begin_similarty_compare(image1_filepath1, image2_filepath2)
-    return sim_list
-
-
-def begin_similarty_compare(image_filepath1, image_filepath2):
     '''logger.debug("image file location: %s"%(download_base_directory ))
     url_pairs = re.split('#+',url_texts)
     urls = url_texts.strip().split()
@@ -48,50 +40,49 @@ def begin_similarty_compare(image_filepath1, image_filepath2):
     # image_filepath2, url2 = filepath_url[1][0], filepath_url[1][1]
     # logger.debug("image2: %s (%s)"%(get_filename(image_filepath2),url2))
 
-    t1 = time.time()
+    # start_time = time.time()
+    #
+    # similarity = image_similarity_bands_via_numpy(image_filepath1, image_filepath2)
+    #
+    # duration = "%0.1f" % ((time.time() - start_time) * 1000)
+    # # log.info("DEBUG image_similarity: bands_via_numpy  => %s took %s ms"%(similarity,duration ))
+    # print("DEBUG image_similarity: bands_via_numpy  => %s took %s ms" % (similarity, duration))
+    # similarity_bands_via_numpy = similarity
 
-    similarity = image_similarity_bands_via_numpy(image_filepath1, image_filepath2)
-
-    duration = "%0.1f" % ((time.time() - t1) * 1000)
-    # log.info("DEBUG image_similarity: bands_via_numpy  => %s took %s ms"%(similarity,duration ))
-    print("DEBUG image_similarity: bands_via_numpy  => %s took %s ms" % (similarity, duration))
-    similarity_bands_via_numpy = similarity
-    t1 = time.time()
+    start_time = time.time()
 
     similarity = image_similarity_histogram_via_pil(image_filepath1, image_filepath2)
     similarity_histogram_via_pil = similarity
 
-    duration = "%0.1f" % ((time.time() - t1) * 1000)
+    duration = "%0.1f" % ((time.time() - start_time) * 1000)
     # logger.debug("image_similarity_histogram_via_pil => %s took %s ms"%(similarity,duration ))
     print("DEBUG image_similarity: histogram_via_pil => %s took %s ms" % (similarity, duration))
 
-    t1 = time.time()
+    start_time = time.time()
 
     similarity = image_similarity_vectors_via_numpy(image_filepath1, image_filepath2)
     similarity_vectors_via_numpy = similarity
 
-    duration = "%0.1f" % ((time.time() - t1) * 1000)
+    duration = "%0.1f" % ((time.time() - start_time) * 1000)
     # logger.debug("image_similarity_vectors_via_numpy => %s took %s ms"%(similarity,duration ))
     print("DEBUG image_similarity: vectors_via_numpy => %s took %s ms" % (similarity, duration))
 
-    t1 = time.time()
+    start_time = time.time()
 
     similarity = image_similarity_greyscale_hash_code(image_filepath1, image_filepath2)
     similarity_greyscale_hash_code = similarity
 
-    duration = "%0.1f" % ((time.time() - t1) * 1000)
+    duration = "%0.1f" % ((time.time() - start_time) * 1000)
     # logger.debug("image_similarity_greyscale_hash_code => %s took %s ms"%(similarity,duration ))
     print("DEBUG image_similarity: greyscale_hash_code => %s took %s ms" % (similarity, duration))
 
     print("DEBUG image_similarity: compare images finished")
     log.info("DEBUG image_similarity: compare images finished")
 
-    return similarity_bands_via_numpy, similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code
-
+    # return similarity_bands_via_numpy, similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code
+    return similarity_histogram_via_pil, similarity_vectors_via_numpy, similarity_greyscale_hash_code
 
 def image_similarity_bands_via_numpy(filepath1, filepath2):
-    import math
-    import operator
     import numpy
     image1 = Image.open(filepath1)
     image2 = Image.open(filepath2)
@@ -105,12 +96,13 @@ def image_similarity_bands_via_numpy(filepath1, filepath2):
         return -1
     s = 0
     for band_index, band in enumerate(image1.getbands()):
+        # 取RGB个层出来，然后对应位置每个相减之和
         m1 = numpy.array([p[band_index] for p in image1.getdata()]).reshape(*image1.size)
         m2 = numpy.array([p[band_index] for p in image2.getdata()]).reshape(*image2.size)
         s += numpy.sum(numpy.abs(m1 - m2))
     return s
 
-
+#直方图均值化
 def image_similarity_histogram_via_pil(filepath1, filepath2):
     from PIL import Image
     import math
